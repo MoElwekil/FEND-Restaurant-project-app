@@ -1,0 +1,252 @@
+/**
+	=> here i will write the final style sheet
+*/
+
+/* = = = = = = = = = = STYLE AGENT = = = = = = = = = = */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: inherit;
+	margin-block-end: inherit;
+	margin-inline-start: inherit;
+	margin-inline-end: inherit;
+	font-weight: inherit;
+}
+td {
+	font-size: 14pt;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = =
+ 		=                  The Index File 	                 =
+			= = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* = = = = = = = = = = THE HEADER = = = = = = = = = = */
+nav h1 {
+	position: relative;
+	-webkit-transform: translateY(50%);
+	-moz-transform: translateY(50%);
+	-ms-transform: translateY(50%);
+	-o-transform: translateY(50%);
+	transform: translateY(50%);
+}
+nav h1 a{
+	font-weight: 800;
+	font-size: 20pt;
+	letter-spacing: 15px;
+}
+
+/* = = = = = = = = = = THE FILTER OPTIONS = = = = = = = = = = */
+.filter-options {
+	height: 100px;
+	text-align: center;
+}
+.filter-options h2 {
+	top: 10px;
+	font-size: 16pt;
+	margin: 0;
+}
+select#neighborhoods-select,
+select#cuisines-select,
+.filter-options h2 {
+	display: inline-block;
+	position: relative;
+	-webkit-transform: translateY(50%);
+	-moz-transform: translateY(50%);
+	-ms-transform: translateY(50%);
+	-o-transform: translateY(50%);
+	transform: translateY(50%);
+	margin: 8px;
+}
+
+/* = = = = = = = = = = RESTAURANTS = = = = = = = = = = */
+#restaurants-list li {
+	display: inline-block;
+	max-width: 575px;
+	width: inherit;
+	padding: 0;
+	border: 0;
+}
+#restaurants-list li h1 {
+	padding: 0 20px;
+	font-size: 18pt;
+	font-weight: 600;
+}
+#restaurants-list p {
+	padding: 0 20px;
+	font-size: 16pt;
+}
+#restaurants-list li a {
+	width: 100%;
+	margin: 10px 0 0;
+	padding: 15px 0;
+	font-size: 14pt;
+	display: block;
+}
+#restaurants-list li a:hover {
+	background-color: #3397DB;
+	text-decoration: underline;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = =
+ 		=                The Restaurant File 	              =
+			= = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/* = = = = = = = = = = header = = = = = = = = = = */
+#breadcrumb {
+	width: 100%;
+}
+
+/* = = = = = = = = = = The Map Section = = = = = = = = = = */
+.inside #map-container {
+	position: relative;
+	right: inherit;
+	min-height: 800px;
+	width: 100%;
+	height: 100%;
+	top: inherit;
+	padding-top: 131px;
+}
+.inside #map {
+	min-height: 800px;
+	float: right;
+	width: 100vw;
+	bottom: 0px;
+	position: relative;
+}
+
+/* = = = = = = = = = = Restaurant information = = = = = = = = = = */
+#restaurant-container, #reviews-container {
+	max-width: 900px;
+	float: none;
+	margin: 0 auto;
+	padding: 20px 0 0;
+}
+#restaurant-name {
+	font-weight: 800;
+	font-size: 20pt;
+}
+#restaurant-img {
+	width: 100%;
+}
+#restaurant-cuisine {
+	width: 100%;
+	padding: 15px 0;
+	font-size: 14pt;
+}
+#reviews-list li {
+	width: calc(100% - 40px);
+	padding: 20px;
+}
+
+/* = = = = = = = = = = Footer = = = = = = = = = = */
+.inside #footer {
+	position: relative;
+	width: 100%;
+	padding: 25px 0;
+}
+
+/**
+	=> style for the Small computer screens and tablets
+*/
+@media screen and (max-width: 1366px){
+	nav h1 {
+		padding-top: 4px;
+	}
+	nav h1 a {
+		font-size: 16pt;
+	}
+
+	/* = = = = = = = = = = The Map Section = = = = = = = = = = */
+	.inside #map-container,
+	.inside #map {
+		min-height: 500px;
+	}
+}
+
+/**
+	=> style for the Smart phones
+*/
+@media screen and (max-width: 680px){
+/* = = = = = = = = = = THE HEADER = = = = = = = = = = */
+	nav {
+		height: 48px;
+	}
+	nav h1 {
+		padding-top: 0;
+		-webkit-transform: translateY(30%);
+		-moz-transform: translateY(30%);
+		-ms-transform: translateY(30%);
+		-o-transform: translateY(30%);
+		transform: translateY(30%);
+	}
+	nav h1 a {
+		font-size: 12pt;
+		letter-spacing: 5px;
+	}
+/* = = = = = = = = = = THE FILTER OPTIONS = = = = = = = = = = */
+	.filter-options {
+		height: 200px;
+	}
+	#neighborhoods-select,
+	#cuisines-select,
+	.filter-options h2 {
+			clear: both;
+			margin: 16px auto;
+			display: block;
+			width: 90%;
+		}
+		.filter-options select {
+			height: 45px;
+		}
+	.filter-options h2 {
+		font-size: 14pt;
+	}
+/* = = = = = = = = = = RESTAURANTS = = = = = = = = = = */
+	#restaurants-list li h1 {
+		font-size: 16pt;
+	}
+	#restaurants-list p {
+		font-size: 14pt;
+	}
+	/* = = = = = = = = = = The Map Section = = = = = = = = = = */
+	.inside #map-container,
+	.inside #map {
+		min-height: 250px;
+	}
+	.inside #map-container {
+		padding-top: 99px;
+	}
+
+}
+
+
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = =
+ 		=              						 		 ARIA							 	              =
+			= = = = = = = = = = = = = = = = = = = = = = = = = = = */
+.skip {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	height: 1px;
+	width: 1px;
+	text-align: left;
+	overflow: hidden;
+}
+
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+	left: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
